@@ -1,0 +1,11 @@
+==> This is your THE LIST <==
+• Dinner : SpanaciSpanaci2
+• pirinç : 1.0
+• Sivi yağ : 4
+• Tuz : True
+• Karabiber : True
+• Ispanak : 1
+• Kuru soğan : 1
+• Domates Salçasi : 1
+• Sucuk : 1
+• Pul biber : True
