@@ -1,25 +1,25 @@
 {
     "Dinners": [
         {
-            "Dinner": "Spanaci",
-            "Ispanak": 1,
-            "Kuru soğan": 1,
-            "pirinç":0.5,
-            "Sivi yağ": 2,
-            "Domates Salçasi":1,
-            "Tuz": true,
-            "Karabiber": true
-        
-        },
-        {
-            "Dinner": "Spanaci2",
-            "Sucuk": 1,
-            "pirinç":0.5,
-            "Sivi yağ": 2,
+            "Dinner": "ispanak yemegi",
+            "ıspanak (kg)": 1.0,
+            "kuru soğan (adet)": 1.0,
+            "pirinç (çay bardağı)": 0.5,
+            "sıvı yağ (yemek kaşığı)": 2.0,
+            "domates salçası (yemek kaşığı)": 1.0,
             "Tuz": true,
             "Karabiber": true,
             "Pul biber": true
-        
+        },
+        {
+            "Dinner": "yesil mercimek yemegi",
+            "yeşil mercimek (su bardağı)": 1.5,
+            "kuru soğan (adet)": 1.0,
+            "sarımsak (diş)": 3.0,
+            "salça (yemek kaşığı)": 2.0,
+            "su (su bardağı)": 7.0,
+            "2 çay kaşığı tuz": true,
+            "zeytinyağı (ya da sıvı yağ) (çay bardağı)": 0.5
         }
     ]
 }

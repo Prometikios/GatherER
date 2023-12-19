@@ -1,0 +1,36 @@
+{
+    "Dinners": [
+        {
+            "Dinner": "Spanaci",
+            "Ispanak": 1,
+            "Kuru soğan": 1,
+            "pirinç":0.5,
+            "Sivi yağ": 2,
+            "Domates Salçasi":1,
+            "Tuz": true,
+            "Karabiber": true
+        
+        },
+        {
+            "Dinner": "Sucuk",
+            "Sucuk": 1,
+            "pirinç":0.5,
+            "Sivi yağ": 2,
+            "Tuz": true,
+            "Karabiber": true,
+            "Pul biber": true
+        
+        },
+        {
+            "Dinner": "Pollo LEMONI",
+            "Pollo": 10,
+            "Sivi yağ": 5,
+            "Hardal":0.2,
+            "Dried Stuf": 2,
+            "Tuz": true,
+            "Karabiber": true,
+            "Pul biber": true
+        
+        }
+    ]
+}
