@@ -50,6 +50,7 @@ def DictExporter(ObjectInput):
   for keyDi in ObjectInput.keys():
     FileToWrite.write(f"{Dot} {keyDi} : {ObjectInput[keyDi]}\n")
   FileToWrite.close()
+  
   with open('cIngredients.json', 'w', encoding='utf8') as f: #for Integerations.py
     json.dump(ObjectInput, f, ensure_ascii=False, indent=4)
 

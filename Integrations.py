@@ -13,14 +13,14 @@ import pyperclip as pc
 def WhatToDo():
     TheCondition = None
     while TheCondition != True:
-        UserAnswer = input("What should I assist you with? \n Email \n Notion \n GoogleKeep\n")
-        if UserAnswer == 'Email':
+        UserAnswer = input("\nWhat should I assist you with? \n Email \n Notion \n GoogleKeep\n\n")
+        if UserAnswer == 'Email' or UserAnswer == 'email':
             TheCondition = True
             Postman()
-        elif UserAnswer == 'Notion':
+        elif UserAnswer == 'Notion' or UserAnswer == 'notion':
             TheCondition = True
             NotionListPageMaker()
-        elif UserAnswer == 'GoogleKeep':
+        elif UserAnswer == 'GoogleKeep' or UserAnswer=='googlekeep':
             TheCondition = True
             GoogleKeepListMaker()
         else:
@@ -38,7 +38,7 @@ def Postman():
         yag = yagmail.SMTP(bot_mail, 'xhwj folz okmj xwsg')
         yag.send(
             to=r_mail,
-            subject="Yagmail test with attachment",
+            subject="Your Shop Mail Post shifu",
             contents=body, 
             #attachments=package,
         )
