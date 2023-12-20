@@ -14,5 +14,6 @@ def MainFucker():
         os.remove('Ingredients.json')
 MainFucker()
 
-#orginize github
+#Dil sorma?
+#Eng entegre?
 #Goodtogo not sure works like what i want?  

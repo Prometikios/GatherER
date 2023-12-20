@@ -1,7 +1,7 @@
-import subprocess, sys, os
+import subprocess, os
 
 def IsItOkay():
-    '''Checks if everything okey and Ask for permition to fix'''
+    '''Checks if everything okey and if not Asks for permition to fix'''
     try:
         import pipreqs
     except ImportError:
@@ -10,35 +10,36 @@ def IsItOkay():
     subprocess.run(["cd", str(os.getcwd)], shell=True, capture_output=True, text=True)
     result = subprocess.run(["pipreqs", '.'], shell=True, capture_output=True, text=True)
     print(result.stdout) #Creates a req file in users device
-
-    ReqSetInDevice = set(line.strip().split('=')[0] for line in open('requirements.txt'))
-    ListsOfModuleNames = ['pyperclip', 'selenium', 'seleniumbase', 'undetected_chromedriver', 'yagmail']
+    subprocess.run(["pip3", 'freeze', '>', 'reqs.txt'], shell=True, capture_output=True, text=True)
+    ReqSetInProject = set(line.strip().split('=')[0] for line in open('requirements.txt'))
+    ModulesInDevice = set(line.strip().split('=')[0] for line in open('reqs.txt'))
+    
     GoSign = False
-    if set(ListsOfModuleNames) <= ReqSetInDevice:
+    if ReqSetInProject <= ModulesInDevice: #checks if its already exists
         GoSign = False
     else:
         UserPermission = input('It seems your device needs some modules. Can I install 4 u? \n Y or N \n')
-        if UserPermission == 'Y':
+        if UserPermission == 'Y': #If not asks for permition to install
             GoSign = True
         else:
-            print('Your choice Its not gonna work. -_-')
+            print('Your choice. Its not gonna work. -_-')
     os.remove('requirements.txt')
-    return GoSign, ListsOfModuleNames
+    os.remove('reqs.txt')
+    return GoSign, ReqSetInProject, ModulesInDevice
 
 def GoodToGO():
     '''Fixes the dependencies'''
-    Sign = IsItOkay() 
-    if Sign[0] == True:
-        for everyModule in Sign[1]:
-            if str(everyModule) in sys.modules:
-                print('K 2 go.')
-            else:
-                install(str(everyModule))
+    Signal = IsItOkay()
+    if Signal[0] == True:
+        for everyModule in Signal[1]:
+            if everyModule not in Signal[2]:
+                install(everyModule)
     else:
-        print('Everything K. Good to go shifu')
+        print('Everything K. Good 2 go shifu')
 def install(module):
     subprocess.check_call(['pip3', 'install', module])
     print(f"The module {module} is installed")
-#GoodToGO()
+GoodToGO()
     
 #RESULT doesnt print?
+#Why doesnt run 'pip3 freeze > reqs.txt'?
