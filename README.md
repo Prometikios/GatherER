@@ -8,5 +8,5 @@
     - [And if u like] it cleans the non-needed files anymore for u those The script made to work on them.
 
 #### How to use it:<br>
-    - Download the python files [NOT NonUsed dir!]
-    - run Scuderio.py & see the magic happining
+    - Just download the python files [NOT NonUsed dir!]
+    - & run Scuderio.py & see the magic happining
