@@ -1,4 +1,4 @@
-### It is a scirpt that I coded (abviously got help from google) which basically makes a **total ingredients** list 4 u. <br><br>
+### It is a scirpt that I coded (abviously got help from google) which basically makes a **total ingredients** list 4 u based on what dinners u want. <br><br>
 
 #### What does it do?:<br>
     - Gets your dinner names and searchs in a cooking website.
