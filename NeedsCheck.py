@@ -1,4 +1,5 @@
 import subprocess, os
+from pip._internal.operations import freeze
 
 def IsItOkay():
     '''Checks if everything okey and if not Asks for permition to fix'''
@@ -10,9 +11,12 @@ def IsItOkay():
     subprocess.run(["cd", str(os.getcwd)], shell=True, capture_output=True, text=True)
     result = subprocess.run(["pipreqs", '.'], shell=True, capture_output=True, text=True)
     print(result.stdout) #Creates a req file in users device
-    subprocess.run(["pip3", 'freeze', '>', 'reqs.txt'], shell=True, capture_output=True, text=True)
     ReqSetInProject = set(line.strip().split('=')[0] for line in open('requirements.txt'))
-    ModulesInDevice = set(line.strip().split('=')[0] for line in open('reqs.txt'))
+
+    ModulesInDevice = set()
+    pkgs = freeze.freeze()
+    for pkg in pkgs: ModulesInDevice.add(pkg.strip().split('=')[0])
+    print(ModulesInDevice)
     
     GoSign = False
     if ReqSetInProject <= ModulesInDevice: #checks if its already exists
@@ -24,7 +28,6 @@ def IsItOkay():
         else:
             print('Your choice. Its not gonna work. -_-')
     os.remove('requirements.txt')
-    os.remove('reqs.txt')
     return GoSign, ReqSetInProject, ModulesInDevice
 
 def GoodToGO():
