@@ -16,4 +16,3 @@ MainFucker()
 
 #Dil sorma?
 #Eng entegre?
-#Goodtogo not sure works like what i want?  

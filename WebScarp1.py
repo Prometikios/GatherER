@@ -1,9 +1,4 @@
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import subprocess
-import json
+
 
 IngType = {
     "SPOON" : 'yemek kaşığı ',
@@ -87,6 +82,14 @@ def THEfunction():
     MainFucker(driver, URListREAL)
     driver.quit()
 
+if __name__ == '__main__':
+    from selenium import webdriver
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.wait import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    import subprocess
+    import json
+    THEfunction()
 #HOŞAF!!! elifler can sikici degismeli?!
 #Fixs => Farkli sekilde cikabiliyor ayni malzeme
 # ÇEVİRİLERİNİ DE YAZMAK (bunu data scraplerken yapılmalı)

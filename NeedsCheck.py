@@ -11,17 +11,15 @@ def IsItOkay():
     subprocess.run(["cd", str(os.getcwd)], shell=True, capture_output=True, text=True)
     result = subprocess.run(["pipreqs", '.'], shell=True, capture_output=True, text=True)
     print(result.stdout) #Creates a req file in users device
-    ReqSetInProject = set(line.strip().split('=')[0] for line in open('requirements.txt'))
-
+    ReqSetInProject = set(line.strip().split('=')[0].replace('_', '-') for line in open('requirements.txt'))
+    
     ModulesInDevice = set()
     pkgs = freeze.freeze()
     for pkg in pkgs: ModulesInDevice.add(pkg.strip().split('=')[0])
-    print(ModulesInDevice)
     
     GoSign = False
-    if ReqSetInProject <= ModulesInDevice: #checks if its already exists
-        GoSign = False
-    else:
+    #not all(mod in ModulesInDevice for mod in ReqSetInProject) 
+    if not ReqSetInProject.issubset(ModulesInDevice) : #checks if all modules r not in device
         UserPermission = input('It seems your device needs some modules. Can I install 4 u? \n Y or N \n')
         if UserPermission == 'Y': #If not asks for permition to install
             GoSign = True
@@ -35,14 +33,18 @@ def GoodToGO():
     Signal = IsItOkay()
     if Signal[0] == True:
         for everyModule in Signal[1]:
-            if everyModule not in Signal[2]:
+            if everyModule in Signal[2]:
+                print(f'{everyModule} is K.')
+            else:
                 install(everyModule)
     else:
         print('Everything K. Good 2 go shifu')
 def install(module):
     subprocess.check_call(['pip3', 'install', module])
     print(f"The module {module} is installed")
-GoodToGO()
+
+if __name__ == '__main__':
+    GoodToGO()
     
 #RESULT doesnt print?
-#Why doesnt run 'pip3 freeze > reqs.txt'?
+#Check if logic is correct or bnot?

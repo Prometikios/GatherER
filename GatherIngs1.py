@@ -1,4 +1,3 @@
-
 import json
 
 class bcolors:
@@ -58,4 +57,5 @@ def TheFunction():
   DictToExport = BreakDownDict()
   DictExporter(DictToExport)
 
-#TheFunction()
+if __name__ == '__main__':
+  TheFunction()
