@@ -159,4 +159,4 @@ if __name__ == '__main__':
     import pyperclip as pc
     WhatToDo()
 
-#=> Mail dogrulugu kontrol etme eklerim sonra
+#=> inserting mail validation? (its rn in PAPPA.py)

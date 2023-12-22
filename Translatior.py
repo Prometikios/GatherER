@@ -60,3 +60,4 @@ if __name__ == '__main__':
     theFunction()
 
 #pop-up close? MAKES PROCESS TOO LONG!!!
+#Asking for which language to translate?

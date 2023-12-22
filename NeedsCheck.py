@@ -18,9 +18,8 @@ def IsItOkay():
     for pkg in pkgs: ModulesInDevice.add(pkg.strip().split('=')[0])
     
     GoSign = False
-    #not all(mod in ModulesInDevice for mod in ReqSetInProject) 
     if not ReqSetInProject.issubset(ModulesInDevice) : #checks if all modules r not in device
-        UserPermission = input('It seems your device needs some modules. Can I install 4 u? \n Y or N \n')
+        UserPermission = input('It seems your device missing some modules. Can I install 4 u? \n Y or N \n')
         if UserPermission == 'Y': #If not asks for permition to install
             GoSign = True
         else:
@@ -47,4 +46,3 @@ if __name__ == '__main__':
     GoodToGO()
     
 #RESULT doesnt print?
-#Check if logic is correct or bnot?

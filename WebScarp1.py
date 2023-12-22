@@ -14,7 +14,7 @@ def ASKforINPUT():
     WordsStorage = list()
     KeywordEnough = "K"
     while True:
-        ObjectInput = input(f"\n \nWhich dinners' recipies should I look for? AND if these enough write '{KeywordEnough}' \n")
+        ObjectInput = input(f"\n \nWhich dinners' recipies should I look for? [write w/ english letters] AND if these enough write '{KeywordEnough} to stop' \n")
         WordsStorage.append(ObjectInput.lower())
         if KeywordEnough ==ObjectInput:
             break
@@ -92,4 +92,3 @@ if __name__ == '__main__':
     THEfunction()
 #HOŞAF!!! elifler can sikici degismeli?!
 #Fixs => Farkli sekilde cikabiliyor ayni malzeme
-# ÇEVİRİLERİNİ DE YAZMAK (bunu data scraplerken yapılmalı)
