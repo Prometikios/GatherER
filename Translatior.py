@@ -1,3 +1,11 @@
+import undetected_chromedriver as uc
+from seleniumbase import Driver
+from selenium.webdriver import ActionChains
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import json, time, pyperclip, json
 
 def ToSkipPopup(driver):
     driver.get(f'https://www.reverso.net/traduzione-testo#sl=tur&tl=ita&text=ekmek')
@@ -49,14 +57,6 @@ def theFunction():
         json.dump(DictNewWithTranslations, f, ensure_ascii=False, indent=4)
 
 if __name__ == '__main__':
-    import undetected_chromedriver as uc
-    from seleniumbase import Driver
-    from selenium.webdriver import ActionChains
-    from selenium.webdriver.common.keys import Keys
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.wait import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    import json, time, pyperclip, json
     theFunction()
 
 #pop-up close? MAKES PROCESS TOO LONG!!!

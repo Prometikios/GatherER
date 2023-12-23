@@ -1,3 +1,14 @@
+import undetected_chromedriver as uc
+from seleniumbase import Driver
+from selenium.webdriver import ActionChains
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
+import json, yagmail, time
+import pyperclip as pc
+
 def WhatToDo():
     TheCondition = None
     while TheCondition != True:
@@ -147,16 +158,6 @@ def NotionListPageMaker():
     chrome.quit()
     # =>Notionda inbox pop up
 if __name__ == '__main__':
-    import undetected_chromedriver as uc
-    from seleniumbase import Driver
-    from selenium.webdriver import ActionChains
-    from selenium import webdriver
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.wait import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    from selenium.webdriver.common.keys import Keys
-    import json, yagmail, time
-    import pyperclip as pc
     WhatToDo()
 
 #=> inserting mail validation? (its rn in PAPPA.py)
