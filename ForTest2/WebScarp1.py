@@ -26,7 +26,7 @@ def ASKforINPUT():
     KeywordEnough = "K"
     while True:
         ObjectInput = input(f"\n \nWhich dinners' recipies should I look for? [write w/ english letters] AND if these enough write '{KeywordEnough}' to stop \n")
-        WordsStorage.append(ObjectInput.lower())
+        WordsStorage.append(ObjectInput.lower().strip())
         if KeywordEnough ==ObjectInput:
             break
     print(WordsStorage)
