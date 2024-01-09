@@ -3,7 +3,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import subprocess
-import json
+import json, shutil
 
 IngType = {
     "SPOON" : 'yemek kaşığı ',
