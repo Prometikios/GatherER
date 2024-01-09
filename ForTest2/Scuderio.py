@@ -1,4 +1,4 @@
-import subprocess, os
+import subprocess, os, shutil
 from pip._internal.operations import freeze
 
 def IsItOkay():
@@ -61,8 +61,13 @@ def MainFucker():
     WhatToDo() #Integrations
     AskingPerPulire = input(f'\nDo u want me to{bcolors.WARNING} delete unnecasarry files{bcolors.ENDC} [those I created] 4 u shifu? Y or N \n ')
     if AskingPerPulire.lower() == 'y':
-        os.remove('cIngredients.json')
-        os.remove('Ingredients.json')
+        try:
+            os.remove('cIngredients.json')
+            os.remove('Ingredients.json')
+            shutil.rmtree('__pycache__')
+            shutil.rmtree('downloaded_files')
+        except:
+            print('no files to delete! :)')
 MainFucker()
 
 

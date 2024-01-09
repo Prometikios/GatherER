@@ -1,4 +1,4 @@
-import subprocess, os
+import subprocess, os, shutil
 from pip._internal.operations import freeze
 
 def IsItOkay():
@@ -64,7 +64,8 @@ def MainFucker():
         try:
             os.remove('cIngredients.json')
             os.remove('Ingredients.json')
-            #os.remove('__pycache__')
+            shutil.rmtree('__pycache__')
+            shutil.rmtree('downloaded_files')
         except:
             print('no files to delete! :)')
 MainFucker()

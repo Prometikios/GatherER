@@ -11,7 +11,13 @@ IngType = {
     "PIECE" : 'adet ',
     "KG" : 'kg ',
     "S_CUPS" : 'su bardağı ',
-    "CLOATH" : 'diş '
+    "CLOATH" : 'diş ',
+    "branch": 'dal',
+    'handOF': 'tutam',
+    "D_spoon": 'tatlı kaşığı',
+    "DEMET": 'demet',
+    "InnerHandOF": 'avuç',
+    "packet": 'paket'
 }
 
 def ASKforINPUT():
