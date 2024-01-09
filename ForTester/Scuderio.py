@@ -61,8 +61,12 @@ def MainFucker():
     WhatToDo() #Integrations
     AskingPerPulire = input(f'\nDo u want me to{bcolors.WARNING} delete unnecasarry files{bcolors.ENDC} [those I created] 4 u shifu? Y or N \n ')
     if AskingPerPulire == 'Y':
-        os.remove('cIngredients.json')
-        os.remove('Ingredients.json')
+        try:
+            os.remove('cIngredients.json')
+            os.remove('Ingredients.json')
+            #os.remove('__pycache__')
+        except:
+            print('no files to delete! :)')
 MainFucker()
 
 
