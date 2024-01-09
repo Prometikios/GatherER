@@ -15,7 +15,9 @@ IngType = {
     "branch": 'dal',
     'handOF': 'tutam',
     "D_spoon": 'tatlı kaşığı',
-    "DEMET": 'demet'
+    "DEMET": 'demet',
+    "InnerHandOF": 'avuç',
+    "packet": 'paket'
 }
 
 def ASKforINPUT():
